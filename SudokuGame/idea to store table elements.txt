@@ -1,0 +1,4 @@
+1. Make a data structure of array containing the sudoku table, and assigning each array to a pointer and store it
+	to an array of pointer
+2. storing sudoku table to a file, every table needs to be load, program will read the text file and return the value
+3. using 3-dimensional array
