@@ -1,6 +1,6 @@
 #include "headerlist.h"
 #define SIZE 9
-#define ARRAY_CATALOG 100
+#define ARRAY_CATALOG 2
 
 /* Add Sudoku Table Elements Here */
 

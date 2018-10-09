@@ -3,7 +3,7 @@
 
 #include "headerlist.h"
 #include "TableList.h"
-#define MAX 2
+#define MAX 100
 
 
 
