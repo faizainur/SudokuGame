@@ -4,7 +4,7 @@ Mini project for Advance Programming class, developed using C and GTK+ for GUI.
 
 ## Prerequisites
 
-1. It is recommended to use MinGW Compiler. Other compiler 'maybe' will work too, we still don't test it yet.
+1. It is recommended to use MinGW Compiler. Other compilers might work, but are not officially supported.
 2. GTK+3.0 is needed for developing GUI interface. For further information about download and installation you can visit [GTK](https://www.gtk.org/download/index.php) official page.
 3. This software needs [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract) and [leptopnica](http://www.leptonica.com/source/README.html) libraries for OCR function. So, you need install it if you want make change in OCR function :)
 4. A proper workstation, recommended 64-bit architecture.
