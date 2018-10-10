@@ -3,7 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"            ],
+                "${workspaceFolder}/**" ,
+                "/msys64/mingw64/include/tesseract",
+                "/msys64/mingw64/include/leptonica"
+        ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",

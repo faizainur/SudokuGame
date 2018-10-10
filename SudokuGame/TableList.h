@@ -1,9 +1,8 @@
 #include "headerlist.h"
 #define SIZE 9
-#define ARRAY_CATALOG 2
+#define ARRAY_CATALOG 100
 
-/* Add Sudoku Table Elements Here */
-
+/* TODO: Add Sudoku Table Elements Here */
 char tblElements1[SIZE][SIZE] = {
     {'a', 'a', 'f', 'F', 'd', '3', 'd', 'c', 's'},
     {'2', '2', 'w', 'h', 'b', 'd', 'x', 'q', 'Q'},

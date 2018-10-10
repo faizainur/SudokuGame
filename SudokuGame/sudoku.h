@@ -44,6 +44,7 @@ bool addTable(char array[][SIZE], int size) {
 	for (row = 0; row < size; ++row) {
 		
 		/* DO SOMETHING */
+		
 
 	}
 	/* if (array == NULL) {
@@ -93,9 +94,9 @@ static bool checkArray(char array[][SIZE]){
 
 bool findElement(char key){
 	int i, j;
-    for (i = 0; i < SIZE; ++i){
+	// TODO
+	for (i = 0; i < SIZE; ++i){
 		for (j = 0; j < SIZE; ++j){
-			/* Action */
 			if (sudoTbl.arrPtr[i][j] == key){
 				sudoTbl.keyX = i;
 				sudoTbl.keyY = j;
@@ -115,6 +116,20 @@ bool replaceElement(int keyX, int keyY, char replaceChar){
 	}
 	return false;
 }
+
+int len(int array[], int size) {
+	int length = 0;
+	int i;
+	for (i = 0; i < size; i++) {
+		if (array[i] == 0) {
+			break;
+		}
+		length += 1;
+	}
+	return length;
+}
+
+
 
 
 
