@@ -7,7 +7,7 @@ char keyword; // keyword char for finding element
 char rplChar; // replacment char
 
 void init(int randNum){
-    // ranOp variable ==> random number generated 
+    // ranNum variable ==> random number generated 
     // after player choose 'New Game' menu
     int i, j;
     initTables();
