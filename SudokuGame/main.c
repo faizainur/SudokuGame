@@ -6,12 +6,10 @@
 
 
 struct sudokuTable sudoTbl; // Intializing sudokuTable structure object
-char keyword; // keyword char for finding element
+size_t keyword; // keyword char for finding element
 size_t rplChar; // replacment char
-size_t temp;
-time_t t;
+size_t temp;time_t t;
 int row, col;
-char fetTab[SIZE][SIZE];
 
 void init(int randNum){
     // ranNum variable ==> random number generated 
@@ -19,9 +17,9 @@ void init(int randNum){
     int i, j;
     initTables();
     sudoTbl.arrPtr = arrayList[randNum]; // choosing tables based on random number (ranOp)
-    // if(checkArray(sudoTbl.arrPtr)){ // check array
-    //     loadTable(sudoTbl.arrPtr, SIZE);
-    // }
+    if(checkArray(sudoTbl.arrPtr)){ // check array
+        loadTable(sudoTbl.arrPtr, SIZE);
+    }
 }
 
 int getRand();
@@ -31,42 +29,14 @@ void fetchTable(char[][SIZE], char[][SIZE]);
 int main(int argc, char const *argv[])
 {    
     /* TODO : Program workflow */
-    // FIXME : fixing replacing element bugs
-
-    // FIXME : BUGS WHEN INPUTIN FOR THE 2nd Time
     // How to FIX IT : add space( ) before %c in scanf function
     srand(((unsigned)time(&t))); // ONLY RUN ONCE
-    init(0);
-    fetchTable(sudoTbl.arrPtr, fetTab);
-    loadTable(fetTab, SIZE);
-    system("pause");
-    // // rplChar = 'G';
-    // scanf(" %c %d %d", &rplChar[0], &row, &col);
-    // fetTab[row][col] = rplChar[0];
-    // loadTable(fetTab, SIZE);
-    // system("pause");
-    // // rplChar = '1';
-    // // getchar();
-    // scanf(" %c %d %d", &temp, &row, &col);
-    // fetTab[row][col] = temp;
-    // fetTab[1][1] = 'J';
-    // // printf("\n%c", temp);
-    // loadTable(fetTab, SIZE);
-
-    printf("\nChar pengganti, baris, dan kolom : ");
-    scanf(" %c %d %d", &rplChar, &row, &col);
-    fetTab[row][col] = rplChar;
-    system("cls");
-    loadTable(fetTab, SIZE);
-    printf("\nChar pengganti, baris, dan kolom : ");
-    scanf(" %c %d %d", &rplChar, &row, &col);
-    fetTab[row][col] = rplChar;
-    system("cls");
-    loadTable(fetTab, SIZE);
-    printf("\nChar pengganti, baris, dan kolom : ");
-    scanf(" %c %d %d", &rplChar, &row, &col);
-    fetTab[row][col] = rplChar;
-    loadTable(fetTab, SIZE);
+    BEGIN : init(0);
+    if (replaceElement(row, col, rplChar)){
+        goto BEGIN;
+    } else {
+        printf("Error replacing element !!!");
+    }
 	return 0;
 }
 
@@ -74,7 +44,7 @@ void showMenu(){
     // TODO : Create menussystem("pause");
 
     printf("\nChar pengganti, baris, dan kolom : ");
-    scanf("%c %d %d", &rplChar, &row, &col);
+    scanf(" %c %d %d", &rplChar, &row, &col);
 }
 
 int getRand(){
