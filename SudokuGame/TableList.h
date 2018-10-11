@@ -4,7 +4,7 @@
 
 /* TODO: Add Sudoku Table Elements Here */
 char tblElements1[SIZE][SIZE] = {
-    {'a', 'a', 'f', 'F', 'd', '3', 'd', 'c', 's'},
+    {'a', ' ', ' ', 'F', 'd', '3', 'd', 'c', 's'},
     {'2', '2', 'w', 'h', 'b', 'd', 'x', 'q', 'Q'},
     {'3', '9', 'q', '3', 'x', 'g', 'w', 'h', 'h'},
     {'6', 'f', 'e', 'f', 'l', 'a', 'k', 'G', 'Q'},
@@ -16,7 +16,7 @@ char tblElements1[SIZE][SIZE] = {
     };
 
  char tblElements2[SIZE][SIZE] = {
-    {'a', 'a', 'f', 'F', 'd', '3', 'd', 'c', 's'},
+    {'a', ' ', ' ', 'F', 'd', '3', 'd', 'c', 's'},
     {'2', '2', 'w', 'h', 'b', 'd', 'x', 'q', 'Q'},
     {'3', '9', 'q', '3', 'x', 'g', 'w', 'h', 'h'},
     {'6', 'f', 'e', 'f', 'l', 'a', 'k', 'G', 'Q'},

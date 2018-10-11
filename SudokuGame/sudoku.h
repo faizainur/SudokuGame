@@ -3,8 +3,8 @@
 
 #include "headerlist.h"
 #include "TableList.h"
-#define MAX 100
 
+#define MAX 100
 
 
 typedef char arrayPointer[SIZE];
@@ -17,10 +17,10 @@ arrayPointer *arrayPtr2;
 /* initializing sudoku structure */
 struct sudokuTable{
 	arrayPointer *arrPtr;
-	char keyList[MAX];
+	char blankList[MAX];
 	int keyPos[MAX][2];
-	int keyX;
-	int keyY;
+	size_t keyX;
+	size_t keyY;
 };
 
 struct sudokuTable sudoTbl;
@@ -38,7 +38,7 @@ void initTables(){
 	
 } 
 
-bool addTable(char array[][SIZE], int size) {
+bool addTable(char array[][SIZE], size_t size) {
 	int row;
 	int col;
 	for (row = 0; row < size; ++row) {
@@ -53,7 +53,7 @@ bool addTable(char array[][SIZE], int size) {
 	return true;
 }
 
-void loadTable(char array[][SIZE], int size){
+void loadTable(char array[][SIZE], size_t size){
     int i, j, k;
     for (i = 0; i < size; ++i){
         if (i == 0){
@@ -84,9 +84,9 @@ void loadTable(char array[][SIZE], int size){
     }
 }
 
-static bool checkArray(char array[][SIZE]){
+bool checkArray(char array[][SIZE]){
 	if (array == NULL){ // checking if array == NULL
-        printf("Error !! failed initilizing table");
+        printf("Error !! failed initializing table");
 		return false;
 	}
 	return true;
@@ -108,27 +108,14 @@ bool findElement(char key){
 	return false;
 }
 
-bool replaceElement(int keyX, int keyY, char replaceChar){
-	char temp = sudoTbl.arrPtr[keyX][keyY];
-	sudoTbl.arrPtr[keyX][keyY] = replaceChar;
-	if (sudoTbl.arrPtr[keyX][keyY] != temp){
+bool replaceElement(size_t keyX, size_t keyY, size_t replaceChar){
+	char temp = sudoTbl.arrPtr[keyX - 1][keyY - 1];
+	sudoTbl.arrPtr[keyX - 1][keyY - 1] = replaceChar;
+	if (sudoTbl.arrPtr[keyX - 1][keyY - 1] != temp){
 		return true;
 	}
 	return false;
 }
-
-int len(int array[], int size) {
-	int length = 0;
-	int i;
-	for (i = 0; i < size; i++) {
-		if (array[i] == 0) {
-			break;
-		}
-		length += 1;
-	}
-	return length;
-}
-
 
 
 

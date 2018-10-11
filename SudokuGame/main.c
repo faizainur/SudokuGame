@@ -1,15 +1,17 @@
 #include "headerlist.h"
 #include "sudoku.h"
 
-#define NULL_CHAR (char)0
-#define null 0
+
+
 
 
 struct sudokuTable sudoTbl; // Intializing sudokuTable structure object
-int tempArr[ARRAY_CATALOG] = {null};
 char keyword; // keyword char for finding element
 char rplChar; // replacment char
 time_t t;
+        int row, col;
+
+
 void init(int randNum){
     // ranNum variable ==> random number generated 
     // after player choose 'New Game' menu
@@ -21,18 +23,37 @@ void init(int randNum){
     }
 }
 
-int static getRand();
+int getRand();
+void showMenu();
 
 int main(int argc, char const *argv[])
 {    
     /* TODO : Program workflow */
-    srand(((unsigned)time(&t)));
-    printf("%d", getRand());
+    srand(((unsigned)time(&t))); // ONLY RUN ONCE
+    BEGIN : init(0);
+    showMenu();
+    
+    if (replaceElement(row, col, rplChar)){
+        printf("\nSuccesful");
+        system("pause");
+        system("cls");
+        goto BEGIN;
+    } else {
+        printf("Error !!");
+    }
 	return 0;
 }
 
-void menu(){
-    // TODO : Create menus
+void showMenu(){
+    // TODO : Create menussystem("pause");
+
+   
+    printf("\nBaris : ");
+    scanf("%d", &row);
+    printf("\nKolom : ");
+    scanf("%d", &col);
+     printf("\nChar pengganti : ");
+    scanf("%c", &rplChar);
 }
 
 int getRand(){
@@ -44,25 +65,3 @@ int getRand(){
     return num;
     
 }
-
-
-
-
-/* Protoype code */
-
-// printf("\ninput keyword and replacement char : ");
-    // scanf("%c %c", &keyword, &rplChar);
-    // bool status = findElement(sudoTbl.arrPtr, keyword);
-    // if (status){
-    //     if (replaceElement(sudoTbl.arrPtr, sudoTbl.keyX, sudoTbl.keyY, rplChar)){
-    //         printf("Replacing char success\n");
-    //         system("pause");
-    //         system("cls");
-    //         loadTable(sudoTbl.arrPtr, SIZE);
-
-    //     } else {
-    //         printf("Unsuccessful");
-    //     }
-    // } else {
-    //     printf("Not found !!");
-    // }
