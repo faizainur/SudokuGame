@@ -17,8 +17,7 @@ arrayPointer *arrayPtr2;
 /* initializing sudoku structure */
 struct sudokuTable{
 	arrayPointer *arrPtr;
-	char blankList[MAX];
-	int keyPos[MAX][2];
+	unsigned int blankCounter;
 	size_t keyX;
 	size_t keyY;
 };
@@ -47,50 +46,46 @@ bool addTable(char array[][SIZE], size_t size) {
 		
 
 	}
-	/* if (array == NULL) {
-		return false;
-	} */
 	return true;
 }
 
 void loadTable(char array[][SIZE], size_t size){
     int i, j, k;
+	printf("\n");
     for (i = 0; i < size; ++i){
-        if (i == 0){
-            for (j = 0; j< 73; ++j){
-                if (j == (73 - 1)){
-                    printf("=\n");
-                } else {
-                    printf("=");
-                }
-            }
-        }
         for (j = 0; j < size; ++j){
-            if (j == (size - 1)){
-                printf("%4c   |\n", array[i][j]);
-            } else if (j == 0){
-				printf("|%4c   |", array[i][j]);
-			}else {
-                printf("%4c   |", array[i][j]);
-            }
+			if (j == 2 || j == 5){
+				printf("%4c   ||", array[i][j]);
+			} else if (j == size -1){
+				printf("%4c   \n", array[i][j]);
+			} else {
+				printf("%4c   |", array[i][j]);
+			}
         }
-        for (j = 0; j < 73; ++j){
-            if (j == (73 - 1)){
-                printf("=\n");
-            } else {
-                printf("=");
-            }
-        }
+        if ( i == 2 || i == 5){
+			for (j = 0; j < 73; ++j){
+				if (j == (73 - 1)){
+					printf("=\n");
+				} else if (j == 23 || j == 24 || j == 48 || j == 49) {
+					printf("|");
+				} else {
+					printf("=");
+				}
+        	}
+		} else if (i != size -1) {
+			for (j = 0; j < 73; ++j){
+				if (j == (73 - 1)){
+					printf("-\n");
+				} else if (j == 23 || j == 24 || j == 48 || j == 49) {
+					printf("|");
+				} else {
+					printf("-");
+				}
+        	}
+		}
     }
 }
 
-bool checkArray(char array[][SIZE]){
-	if (array == NULL){ // checking if array == NULL
-        printf("Error !! failed initializing table");
-		return false;
-	}
-	return true;
-}
 
 bool findElement(char key){
 	int i, j;
