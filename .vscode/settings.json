@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "sudoku.h": "c"
-    }
+    },
+    "python.pythonPath": "C:\\Users\\ASUS\\Anaconda3\\python.exe"
 }

@@ -89,7 +89,6 @@ void loadTable(char array[][SIZE], size_t size){
 
 bool findElement(char key){
 	int i, j;
-	// TODO
 	for (i = 0; i < SIZE; ++i){
 		for (j = 0; j < SIZE; ++j){
 			if (sudoTbl.arrPtr[i][j] == key){

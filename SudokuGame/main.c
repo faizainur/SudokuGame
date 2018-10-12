@@ -19,7 +19,7 @@ void init(int randNum){
     // Count blank spot in the table
     for (i = 0; i < SIZE; ++i){
         for (j = 0; j < SIZE; ++j){
-            /* Do Somthing */
+            /* Do Something */
             if (sudoTbl.arrPtr[i][j] == ' '){
                 sudoTbl.blankCounter += 1;
             }
