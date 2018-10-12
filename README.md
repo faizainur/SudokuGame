@@ -20,7 +20,7 @@ Use `git clone` command in terminal or use `git pull` to get the latest source c
     gcc main.c -o main (`pkg-config --cflags --libs gtk+-3.0 lept tesseract`) // remove the brackets
     ```
 
-   alternatively, you can use `pkg-config` to get and copy the all linker and compiler flags. Use those as options when run `gcc` command
+   alternatively, you can use `pkg-config` to get and copy all linker and compiler flags. Use those as options when run `gcc` command
     ```
     pkg-config --cflags --libs gtk+-3.0 lept tesseract
     ```
