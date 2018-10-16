@@ -9,6 +9,9 @@ time_t t;
 int row, col;
 
 
+int getRand();
+void showMenu();
+
 void init(int randNum){
     // ranNum variable ==> random number generated 
     // after player choose 'New Game' menu
@@ -19,9 +22,11 @@ void init(int randNum){
     loadTable(sudoTbl.arrPtr, SIZE);
     // Count blank spot in the table
     for (i = 0; i < SIZE; ++i){
-        for (j = 0; j < SIZE; ++j){
+        for (j = 0; j < SIZE; ++j)
+        {
             /* Do Something */
-            if (sudoTbl.arrPtr[i][j] == ' '){
+            if (sudoTbl.arrPtr[i][j] == ' ')
+            {
                 sudoTbl.blankCounter += 1;
             }
         }
@@ -29,20 +34,18 @@ void init(int randNum){
     printf("%d", sudoTbl.blankCounter);
 }
 
-int getRand();
-void showMenu();
-
 int main(int argc, char const *argv[])
 {    
     /* TODO : Program workflow */
     // How to FIX IT : add space( ) before %c in scanf function
-
+    system("pause");
 	return 0;
 }
 
 void showMenu(){
-    // TODO : Create menussystem("pause");
+    // TODO : Create menus
     
+    system("pause");
 }
 
 int getRand(){
