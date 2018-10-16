@@ -4,7 +4,7 @@
 #include "headerlist.h"
 #include "TableList.h"
 
-#define MAX 100
+#define MAX_SIZE 100
 
 
 typedef char arrayPointer[SIZE];

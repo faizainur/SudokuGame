@@ -8,6 +8,7 @@ size_t temp;
 time_t t;
 int row, col;
 
+
 void init(int randNum){
     // ranNum variable ==> random number generated 
     // after player choose 'New Game' menu
@@ -35,13 +36,13 @@ int main(int argc, char const *argv[])
 {    
     /* TODO : Program workflow */
     // How to FIX IT : add space( ) before %c in scanf function
-    srand(((unsigned)time(&t))); // ONLY RUN ONCE
-    init(0);
+
 	return 0;
 }
 
 void showMenu(){
     // TODO : Create menussystem("pause");
+    
 }
 
 int getRand(){
