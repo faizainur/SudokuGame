@@ -8,15 +8,22 @@
 
 
 typedef char arrayPointer[SIZE];
-arrayPointer *arrayList[SIZE]; // array of pointer
+arrayPointer *arrayQList[SIZE]; // array of pointer
+arrayPointer *arrayAList[SIZE];
 
 /* Pointer to array */
 arrayPointer *arrayPtr;
 arrayPointer *arrayPtr2;
+arrayPointer *arrayPtr3;
+
+arrayPointer *arrayAnsPtr;
+arrayPointer *arrayAnsPtr2;
+arrayPointer *arrayAnsPtr3;
 
 /* initializing sudoku structure */
 struct sudokuTable{
 	arrayPointer *arrPtr;
+	arrayPointer *ansArr;
 	unsigned int blankCounter;
 	size_t keyX;
 	size_t keyY;
@@ -28,12 +35,21 @@ struct sudokuTable sudoTbl;
 void initTables(){
 
 	/* Assign pointer to arrays */
-    arrayPtr = tblElements2;
-	arrayPtr2 = tblElements3;
+    arrayPtr = tblElements1;
+	arrayPtr2 = tblElements2;
+	arrayPtr3 = tblElements3;
+
+	arrayAnsPtr = arrayEval1;
+	arrayAnsPtr2 = arrayEval2;
+	arrayAnsPtr3 = arrayEval3;
 
 	/* Put pointer to array of pointer */
-	arrayList[0] = arrayPtr;
-	arrayList[1] = arrayPtr2;
+	arrayQList[0] = arrayPtr;
+	arrayAList[0] = arrayAnsPtr;
+	arrayQList[1] = arrayPtr2;
+	arrayAList[1] = arrayAnsPtr2;
+	arrayQList[2] = arrayPtr3;
+	arrayAList[2] = arrayAnsPtr3;
 	
 } 
 
@@ -111,6 +127,22 @@ bool replaceElement(size_t keyX, size_t keyY, size_t replaceChar){
 	return false;
 }
 
+bool eval(char arrQSrc[][SIZE], char arrASrc[][SIZE],int wrongArrIndex[] ){
+	int i, j, wrongCounter;
+	wrongCounter = 0;
+	for (i=0;i<SIZE;i++){
+		for (j=0;j<SIZE;j++){
+			if (arrQSrc[i][j] != arrASrc[i][j]){
+				wrongArrIndex[i] = i+1;
+				wrongCounter += 1;
+			}
+		}
+	}
+	if(wrongCounter != 0){
+		return false;
+	}
+	return true;
+}
 
 
 

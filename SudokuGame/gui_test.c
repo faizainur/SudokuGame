@@ -1,5 +1,8 @@
 #include "headerlist.h"
+#include <gtk/gtk.h>
 #include "sudoku.h"
+
+
 GtkBuilder *builder, *builder_about;
 GtkWidget *main_window, *menu_new, *menu_load, *menu_quit, *menu_about;
 GtkWidget *header, *button, *textEntry[9][9], *btnBox;
@@ -94,7 +97,6 @@ int main(int argc, char **argv)
             gtk_entry_set_max_length(GTK_ENTRY(textEntry[i][j]), 1);
         }
     }
-    // gtk_editable_set_editable(GTK_EDITABLE(entry), TRUE);
 
     pango_attr_list_unref(attrlist);
     gtk_header_bar_set_title(GTK_HEADER_BAR (header), "Sudoku Game");
@@ -117,7 +119,6 @@ void init(int randNum){
     int i, j;
     initTables();
     sudoTbl.arrPtr = arrayList[randNum];
-    // sudoTbl.blankCounter = 0;
 }
 void new_game(){
     int i,j;
