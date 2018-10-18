@@ -17,7 +17,8 @@ pacman -S <package-name> // remove the brackets
 Any linux based installation instruction would run properly, since [MSYS2](https://www.msys2.org/) terminal very similar with linux terminal. You can look the package name [here](https://github.com/msys2/msys2/wiki/Packages).<br>
 After installation, don't forget to set the `environment-path`.
 ```
-NB : there are some libraries that you cannot install using MSYS2. In that case, read the libraries documentation and follow the installation instruction
+NB : there are some libraries that you cannot install using MSYS2.
+In that case, read the libraries documentation and follow the installation instruction
 ```
 ## Get the source code
 
