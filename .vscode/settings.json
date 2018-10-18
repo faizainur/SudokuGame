@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "sudoku.h": "c"
+        "sudoku.h": "c",
+        "headerlist.h\u0000aderlist.h": "c",
+        "headerlist.h": "c"
     },
     "python.pythonPath": "C:\\Users\\ASUS\\Anaconda3\\python.exe"
 }

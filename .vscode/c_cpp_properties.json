@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**" ,
                 "/msys64/mingw64/include/tesseract",
-                "/msys64/mingw64/include/leptonica"
+                "/msys64/mingw64/include/leptonica",
+                "${workspaceFolder}/headers"
         ],
             "defines": [
                 "_DEBUG",
@@ -13,7 +14,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.17134.0",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.15.26726/bin/Hostx64/x64/cl.exe",
+            "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "msvc-x64"
