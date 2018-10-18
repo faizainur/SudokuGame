@@ -14,8 +14,8 @@ Use [MSYS2](https://www.msys2.org/) to installing the dependencies needed. Run t
 pacman -Syu // updating package list
 pacman -S <package-name> // remove the brackets
 ```
-Any linux based installation instruction would run properly, since [MSYS2](https://www.msys2.org/) terminal very similar with linux terminal. You can look the package name [here](https://github.com/msys2/msys2/wiki/Packages)
-
+Any linux based installation instruction would run properly, since [MSYS2](https://www.msys2.org/) terminal very similar with linux terminal. You can look the package name [here](https://github.com/msys2/msys2/wiki/Packages).<br>
+After installation, don't forget to set the `environment-path`.
 ## Get the source code
 
 Use `git clone` command in terminal or use `git pull` to get the latest source code
