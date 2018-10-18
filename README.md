@@ -9,13 +9,16 @@ Mini project for Advance Programming class, developed using C and GTK+ for GUI.
 3. A windows based workstation, recommended 64-bit architecture.
 
 ## Installing dependencies
-Use [MSYS2](https://www.msys2.org/) to installing the dependencies needed. Run this command in [MSYS2](https://www.msys2.org/) terminal
+I recommend use [MSYS2](https://www.msys2.org/) to installing the dependencies needed. Run this command in [MSYS2](https://www.msys2.org/) terminal
 ```
 pacman -Syu // updating package list
 pacman -S <package-name> // remove the brackets
 ```
 Any linux based installation instruction would run properly, since [MSYS2](https://www.msys2.org/) terminal very similar with linux terminal. You can look the package name [here](https://github.com/msys2/msys2/wiki/Packages).<br>
 After installation, don't forget to set the `environment-path`.
+```
+NB : there are some libraries that you cannot install using MSYS2. In that case, read the libraries documentation and follow the installation instruction
+```
 ## Get the source code
 
 Use `git clone` command in terminal or use `git pull` to get the latest source code
