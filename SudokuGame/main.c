@@ -1,5 +1,5 @@
-#include "headerlist.h"
-#include "sudoku.h"
+#include "headers/headerlist.h"
+#include "headers/sudoku.h"
 
 struct sudokuTable sudoTbl; // Intializing sudokuTable structure object
 size_t keyword; // keyword char for finding element
@@ -124,7 +124,7 @@ void helpMenu(){
 }
 int mainMenu(){
 	int CHOICE1;
-	printf("\n-------------------------------------------------------------\n\n");
+	printf("\n-------------------------------------------------------------\n");
 	printf("                  SUDOKU CHRONICLES SAGA                     \n");
 	printf("                play until your brain burst                  \n");
 	printf("-------------------------------------------------------------\n\n");
