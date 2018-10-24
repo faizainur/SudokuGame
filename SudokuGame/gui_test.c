@@ -1,4 +1,3 @@
-// #include "../headers/headerlist.h"
 #include <gtk/gtk.h>
 #include "headers/sudoku.h"
 
@@ -11,17 +10,16 @@ GError *error = NULL;
 PangoAttrList *attrlist;
 PangoAttribute *attr;
 PangoFontDescription *df;
+
+
 struct sudokuTable sudoTbl;
-
-// void on_about_window_close(GtkWidget *widget, gpointer data){
-//     g_print("Test exit");
-// }
-
 void init(int);
 void new_game();
 int getRand();
 int initAbout();
 void initComponent();
+void checkAns();
+void clearTable();
 
 int main(int argc, char **argv)
 {
@@ -100,10 +98,6 @@ int getRand(){
     return num; 
 }
 
-int checkAns(){
-
-}
-
 void initComponent(){
     int i,j,k;
     
@@ -151,4 +145,25 @@ int initAbout(){
     gtk_about_dialog_get_website_label(about_window), "logo-icon-name",
     gtk_about_dialog_get_logo_icon_name(about_window), NULL);
     return (0);
+}
+
+void clearTable(){
+    // FIXME : test it !!
+    int i, j;
+    for (i = 0; i < 9; ++i){
+        for (j = 0; j < 9; ++j){
+            gtk_entry_set_text(GTK_ENTRY(textEntry[i][j]), "");
+        }
+    }
+}
+
+bool checkAns(){
+    int i, j;
+    for (i = 0; i < 9; ++i){
+        for (j = 0; j < 9; ++j){
+            if (gtk_entry_get_text(GTK_ENTRY(textEntry[i][j])) != sudoTbl.ansArr[i][j]){
+                g_print("Check again !!");
+            }
+        }
+    }
 }
