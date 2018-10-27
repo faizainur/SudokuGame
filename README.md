@@ -5,7 +5,7 @@ Mini project for Advance Programming class, developed using C and GTK+ for GUI.
 ## Prerequisites
 ```
 !!! WARNING !!!
-You can't compile and run the EXE files if you do not install all dependencies
+You can't compile and run the GUI_MAIN.EXE file if you do not install all dependencies. The GUI needs specific libraries to run, unless you build it to a binary files including all dependencies using any build tools.
 ```
 1. It is recommended to use MinGW Compiler. Other compilers might work, but are not officially supported.
 2. GTK+3.0 is needed for developing GUI interface. For further information about download and installation you can visit [GTK](https://www.gtk.org/download/index.php) official page.
