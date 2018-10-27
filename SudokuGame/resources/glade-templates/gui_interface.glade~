@@ -8,11 +8,6 @@
     <property name="icon_name">user-trash</property>
     <property name="icon_size">1</property>
   </object>
-  <object class="GtkImage" id="img_menu_getting">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-about</property>
-  </object>
   <object class="GtkImage" id="img_menu_load">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -199,7 +194,7 @@
                 <property name="orientation">vertical</property>
                 <property name="spacing">1</property>
                 <child>
-                  <object class="GtkLabel" id="lbl_1_countertxt_88">
+                  <object class="GtkLabel" id="lbl_1_counter">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_top">2</property>
@@ -432,15 +427,6 @@
                       <object class="GtkMenu">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <child>
-                          <object class="GtkImageMenuItem" id="menu_getting_started">
-                            <property name="label" translatable="yes">Getting started</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="image">img_menu_getting</property>
-                            <property name="use_stock">False</property>
-                          </object>
-                        </child>
                         <child>
                           <object class="GtkImageMenuItem" id="menu_about">
                             <property name="label">gtk-about</property>
